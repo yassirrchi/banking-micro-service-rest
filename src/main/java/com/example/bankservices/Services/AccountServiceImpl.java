@@ -27,16 +27,7 @@ private AccountRepository accountRepository;
                 .currency(bankAccountRequestDTO.getCurrency())
 
                 .build();
-        /*
-BankAccount saveBankAccount=accountRepository.save(bankAccount);
-        BankAccountResponseDTO bankAccountResponseDTO=BankAccountResponseDTO.builder()
-                .id(saveBankAccount.getId())
-                .type(saveBankAccount.getType())
-                .createdAt(saveBankAccount.getCreatedAt())
-                .currency(saveBankAccount.getCurrency())
-                .balance(saveBankAccount.getBalance())
 
-                .build();*/
         BankAccountResponseDTO bankAccountResponseDTO=accountMapper.fromBankAcc(bankAccount);
 
 
